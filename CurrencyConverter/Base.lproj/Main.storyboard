@@ -1,24 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="F8p-3q-7EO">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zpC-Ks-66i">
+                                <rect key="frame" x="50" y="89" width="293" height="699"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4we-Ef-vpt" userLabel="labelTitle">
+                                        <rect key="frame" x="4" y="0.0" width="285.33333333333331" height="26.666666666666668"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="26"/>
+                                        <color key="textColor" red="0.96470588450000005" green="0.78039217000000005" blue="0.67058825489999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wx1-6V-Zkj">
+                                        <rect key="frame" x="8.6666666666666572" y="469" width="275.66666666666674" height="230"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qWu-5I-93W" userLabel="USD View">
+                                                <rect key="frame" x="0.0" y="0.0" width="275.66666666666669" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter USD:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyV-FC-vO7" userLabel="labelUSD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="125.66666666666667" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
+                                                        <color key="textColor" red="0.93460434675216675" green="0.98029345273971558" blue="0.97890502214431763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gX-R7-mZG">
+                                                        <rect key="frame" x="175.66666666666669" y="0.0" width="100" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="FIN-rW-WQ8"/>
+                                                            <constraint firstAttribute="width" constant="100" id="ycn-5e-cWe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.28627452250000002" green="0.32549020649999999" blue="0.35686278339999999" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="MAL-tA-ChX" userLabel="EUR View">
+                                                <rect key="frame" x="0.0" y="40" width="275.66666666666669" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EUR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNH-Z1-i8a" userLabel="labelEUR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                                        <color key="textColor" red="0.93460434675216675" green="0.98029345273971558" blue="0.97890502214431763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jqu-FB-RiI">
+                                                        <rect key="frame" x="226.66666666666666" y="0.0" width="50.999999999999972" height="30"/>
+                                                        <color key="onTintColor" red="0.09185374528169632" green="0.56453365087509155" blue="0.41003239154815674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.28627452250000002" green="0.32549020649999999" blue="0.35686278339999999" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="qZA-ES-EFi" userLabel="KRW View">
+                                                <rect key="frame" x="0.0" y="80" width="275.66666666666669" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KRW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrA-r7-L0K" userLabel="labelKRW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
+                                                        <color key="textColor" red="0.93460434675216675" green="0.98029345273971558" blue="0.97890502214431763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lng-HV-yIO">
+                                                        <rect key="frame" x="226.66666666666666" y="0.0" width="50.999999999999972" height="30"/>
+                                                        <color key="onTintColor" red="0.09185374528169632" green="0.56453365087509155" blue="0.41003239154815674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.28627452250000002" green="0.32549020649999999" blue="0.35686278339999999" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="7qG-nO-cLY" userLabel="GBP View">
+                                                <rect key="frame" x="0.0" y="120" width="275.66666666666669" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GBP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkY-U9-8ni" userLabel="labelCNY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
+                                                        <color key="textColor" red="0.93460434675216675" green="0.98029345273971558" blue="0.97890502214431763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lDA-mf-aPd">
+                                                        <rect key="frame" x="226.66666666666666" y="0.0" width="50.999999999999972" height="30"/>
+                                                        <color key="onTintColor" red="0.09185374528169632" green="0.56453365087509155" blue="0.41003239154815674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.28627452250000002" green="0.32549020649999999" blue="0.35686278339999999" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="180" translatesAutoresizingMaskIntoConstraints="NO" id="jZb-ge-7op" userLabel="JPY Vew">
+                                                <rect key="frame" x="0.0" y="160" width="275.66666666666669" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JPY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLe-dZ-KdU" userLabel="labelJPY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="46.666666666666664" height="30"/>
+                                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
+                                                        <color key="textColor" red="0.93460434675216675" green="0.98029345273971558" blue="0.97890502214431763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ecY-Fg-HGx">
+                                                        <rect key="frame" x="226.66666666666666" y="0.0" width="50.999999999999972" height="30"/>
+                                                        <color key="onTintColor" red="0.09185374528169632" green="0.56453365087509155" blue="0.41003239154815674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.28627452250000002" green="0.32549020649999999" blue="0.35686278339999999" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29Q-3m-mP0">
+                                                <rect key="frame" x="93.333333333333343" y="200" width="89" height="30"/>
+                                                <color key="backgroundColor" red="0.09185374528169632" green="0.56453365087509155" blue="0.41003239154815674" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="18"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="CONVERT">
+                                                    <color key="titleColor" red="0.99316412210464478" green="0.99316412210464478" blue="0.99316412210464478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.32156863810000003" green="0.37647059560000001" blue="0.41176474089999998" alpha="0.29972061258278143" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="MAL-tA-ChX" firstAttribute="height" secondItem="qWu-5I-93W" secondAttribute="height" id="27Z-hd-ngi"/>
+                                            <constraint firstItem="qZA-ES-EFi" firstAttribute="leading" secondItem="wx1-6V-Zkj" secondAttribute="leading" id="7e8-MO-APv"/>
+                                            <constraint firstItem="7qG-nO-cLY" firstAttribute="height" secondItem="qWu-5I-93W" secondAttribute="height" id="8Kr-ar-Spt"/>
+                                            <constraint firstItem="qWu-5I-93W" firstAttribute="leading" secondItem="wx1-6V-Zkj" secondAttribute="leading" id="9wv-vu-AOw"/>
+                                            <constraint firstItem="jZb-ge-7op" firstAttribute="leading" secondItem="wx1-6V-Zkj" secondAttribute="leading" id="CUe-E1-3jL"/>
+                                            <constraint firstItem="MAL-tA-ChX" firstAttribute="leading" secondItem="wx1-6V-Zkj" secondAttribute="leading" id="Fza-1R-beL"/>
+                                            <constraint firstAttribute="trailing" secondItem="7qG-nO-cLY" secondAttribute="trailing" id="ItH-ZU-SjU"/>
+                                            <constraint firstAttribute="trailing" secondItem="jZb-ge-7op" secondAttribute="trailing" id="Myv-8R-dFR"/>
+                                            <constraint firstItem="jZb-ge-7op" firstAttribute="height" secondItem="qWu-5I-93W" secondAttribute="height" id="O0t-8A-RaT"/>
+                                            <constraint firstItem="7qG-nO-cLY" firstAttribute="leading" secondItem="wx1-6V-Zkj" secondAttribute="leading" id="TwD-VD-jN3"/>
+                                            <constraint firstAttribute="trailing" secondItem="qZA-ES-EFi" secondAttribute="trailing" id="a2q-6B-ATh"/>
+                                            <constraint firstAttribute="trailing" secondItem="qWu-5I-93W" secondAttribute="trailing" id="afB-kr-fEw"/>
+                                            <constraint firstItem="29Q-3m-mP0" firstAttribute="height" secondItem="qWu-5I-93W" secondAttribute="height" id="hBu-ti-NCl"/>
+                                            <constraint firstAttribute="trailing" secondItem="MAL-tA-ChX" secondAttribute="trailing" id="o0h-kb-1En"/>
+                                            <constraint firstItem="qZA-ES-EFi" firstAttribute="height" secondItem="qWu-5I-93W" secondAttribute="height" id="yoi-Mz-XHd"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4we-Ef-vpt" firstAttribute="centerX" secondItem="zpC-Ks-66i" secondAttribute="centerX" id="vB6-ao-7Y9"/>
+                                </constraints>
+                                <variation key="heightClass=compact" spacing="30"/>
+                                <variation key="heightClass=regular-widthClass=compact" spacing="300"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zpC-Ks-66i" secondAttribute="trailing" constant="50" id="1pd-GV-OHb"/>
+                            <constraint firstItem="F8p-3q-7EO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="6Jx-1T-Up2"/>
+                            <constraint firstItem="zpC-Ks-66i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dnj-TA-fIq"/>
+                            <constraint firstItem="zpC-Ks-66i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="T6q-uF-CvA"/>
+                            <constraint firstItem="F8p-3q-7EO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ya5-mc-F2i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zpC-Ks-66i" secondAttribute="bottom" constant="30" id="h4f-0F-rfo"/>
+                            <constraint firstItem="zpC-Ks-66i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="hii-O2-Dbq"/>
+                            <constraint firstAttribute="bottom" secondItem="F8p-3q-7EO" secondAttribute="bottom" id="v1T-GE-D9L"/>
+                            <constraint firstItem="F8p-3q-7EO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vtt-fw-sZM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="43.511450381679388" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg1" width="1721.3333740234375" height="968.33331298828125"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
