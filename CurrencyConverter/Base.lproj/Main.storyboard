@@ -29,7 +29,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wx1-6V-Zkj" userLabel="Switch View">
-                                        <rect key="frame" x="8.6666666666666288" y="484" width="275.66666666666674" height="230"/>
+                                        <rect key="frame" x="8.6666666666666572" y="484" width="275.66666666666674" height="230"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qWu-5I-93W" userLabel="USD View">
                                                 <rect key="frame" x="0.0" y="0.0" width="275.66666666666669" height="30"/>
@@ -189,18 +189,22 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="inputUSD" destination="7gX-R7-mZG" id="30V-nn-8kJ"/>
-                        <segue destination="rxX-gJ-zFy" kind="presentation" identifier="toConversion" id="UVY-ag-rSU"/>
+                        <outlet property="inputUSD" destination="7gX-R7-mZG" id="VKz-Yl-VBN"/>
+                        <outlet property="switchEUR" destination="Jqu-FB-RiI" id="jlH-HY-tKm"/>
+                        <outlet property="switchGBP" destination="lDA-mf-aPd" id="jx3-nq-3qx"/>
+                        <outlet property="switchJPY" destination="ecY-Fg-HGx" id="cqR-sx-J82"/>
+                        <outlet property="switchKRW" destination="Lng-HV-yIO" id="4dT-fo-wzo"/>
+                        <segue destination="rxX-gJ-zFy" kind="presentation" identifier="toConversionView" id="UVY-ag-rSU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="43.511450381679388" y="-27.464788732394368"/>
         </scene>
-        <!--View Conversion-->
+        <!--Conversion View Controller-->
         <scene sceneID="Y3T-3X-rc9">
             <objects>
-                <viewController id="rxX-gJ-zFy" customClass="ViewConversion" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rxX-gJ-zFy" customClass="ConversionViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GN6-7f-Lsa">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,6 +382,13 @@
                             <constraint firstItem="nzy-k9-VEl" firstAttribute="leading" secondItem="GN6-7f-Lsa" secondAttribute="leading" id="qW5-aD-YIJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="valueEUR" destination="oIB-7E-jdl" id="X49-gp-IMX"/>
+                        <outlet property="valueGBP" destination="3hy-5p-m8P" id="wK7-D1-I6g"/>
+                        <outlet property="valueJPY" destination="25O-7w-sD0" id="yWx-jf-tIS"/>
+                        <outlet property="valueKRW" destination="TOY-ZQ-Lkq" id="CP3-cT-UaF"/>
+                        <outlet property="valueUSD" destination="Ls9-pV-Fdg" id="E0x-2a-izE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l38-1j-Pv2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

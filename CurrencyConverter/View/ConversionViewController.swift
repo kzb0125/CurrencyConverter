@@ -7,23 +7,36 @@
 
 import UIKit
 
-class ViewConversionViewController: UIViewController {
+class ConversionViewController: UIViewController {
 
+    @IBOutlet weak var valueUSD: UILabel!
+    @IBOutlet weak var valueEUR: UILabel!
+    @IBOutlet weak var valueKRW: UILabel!
+    @IBOutlet weak var valueGBP: UILabel!
+    @IBOutlet weak var valueJPY: UILabel!
+    
+    
+    var usd: String = ""
+    var eur: String = ""
+    var krw: String = ""
+    var gbp: String = ""
+    var jpy: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        valueUSD.text = "\(usd)"
+        valueEUR.text = "\(eur)"
+        valueKRW.text = "\(krw)"
+        valueGBP.text = "\(gbp)"
+        valueJPY.text = "\(jpy)"
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+    
+    // Hide views that have been switched off .isHidden = true
+    
+    
 }

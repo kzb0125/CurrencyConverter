@@ -29,7 +29,7 @@ struct ConversionLogic {
         }
     }
     
-    mutating func calculateConversion(_ usdValue: String) {
+    mutating func calculateConversion(_ usdValue: String) -> [Int] {
         
         usd = Int(usdValue)!
         eur = Int(Double(usd) * CurrencyConstants.USD_TO_EUR)
@@ -37,6 +37,7 @@ struct ConversionLogic {
         gbp = Int(Double(usd) * CurrencyConstants.USD_TO_GBP)
         jpy = Int(Double(usd) * CurrencyConstants.USD_TO_JPY)
         
+        return [usd, eur, krw, gbp, jpy]
     }
     
     
