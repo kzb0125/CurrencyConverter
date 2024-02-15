@@ -35,15 +35,18 @@ class ViewController: UIViewController {
         // input error check
         do {
             valueUSD = try checkInput()
-            print(valueUSD)
             conversionArr = conversionLogic.calculateConversion(inputUSD.text!)
             self.performSegue(withIdentifier: "toConversionView", sender: self)
         } catch InputError.InputEmpty(let reason) {
-            print(reason)
+            inputUSD.text = reason
         } catch InputError.InvalidType(let reason) {
-            print(reason)
+            inputUSD.text = reason
+        } catch InputError.MaxValue(let reason) {
+            inputUSD.text = reason
+        } catch InputError.NegativeValue(let reason) {
+            inputUSD.text = reason
         } catch {
-            print("Unknown Error")
+            inputUSD.text = "Unknown Error"
         }
         
     }
@@ -65,11 +68,19 @@ class ViewController: UIViewController {
     func checkInput() throws -> Int {
         // checks that input is not empty
         guard let checkInput = inputUSD.text, !checkInput.isEmpty else {
-            throw InputError.InputEmpty(reason: "Empty Input: Enter Amount")
+            throw InputError.InputEmpty(reason: "Enter Value in USD")
         }
         // checks if input is an integer
-        guard Int(inputUSD.text!) is Int else {
-            throw InputError.InvalidType(reason: "Value must be an Integer")
+        guard UInt(inputUSD.text!) is UInt else {
+            throw InputError.InvalidType(reason: "Integer Values Only")
+        }
+        // checks maximum integer value
+        guard UInt(inputUSD.text!)! <= Int.max else {
+            throw InputError.MaxValue(reason: "Max Value Exceeded")
+        }
+        // checks for positive value
+        guard Int(inputUSD.text!)! > 0 else {
+            throw InputError.NegativeValue(reason: "Positive Values Only")
         }
         return Int(inputUSD.text!)!
     }
@@ -77,6 +88,8 @@ class ViewController: UIViewController {
     enum InputError: Error {
         case InvalidType(reason: String)
         case InputEmpty(reason: String)
+        case MaxValue(reason: String)
+        case NegativeValue(reason: String)
     }
 }
 

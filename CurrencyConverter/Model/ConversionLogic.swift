@@ -40,6 +40,9 @@ struct ConversionLogic {
         return [usd, eur, krw, gbp, jpy]
     }
     
+    func valueCheck() throws {
+        
+    }
     
     
 }

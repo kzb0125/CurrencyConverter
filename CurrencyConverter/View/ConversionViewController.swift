@@ -22,15 +22,24 @@ class ConversionViewController: UIViewController {
     var gbp: Int?
     var jpy: Int?
     
+    let currencyFormatter = NumberFormatter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        valueUSD.text = String(usd ?? 0)
-        valueEUR.text = String(eur ?? 0)
-        valueKRW.text = String(krw ?? 0)
-        valueGBP.text = String(gbp ?? 0)
-        valueJPY.text = String(jpy ?? 0)
+        currencyFormatter.numberStyle = .currency
+        currencyFormatter.maximumFractionDigits = 0
         
+        currencyFormatter.currencyCode = "USD"
+        valueUSD.text = currencyFormatter.string(from: (usd ?? 0) as NSNumber)
+        currencyFormatter.currencyCode = "EUR"
+        valueEUR.text = currencyFormatter.string(from: (eur ?? 0) as NSNumber)
+        currencyFormatter.currencyCode = "KRW"
+        valueKRW.text = currencyFormatter.string(from: (krw ?? 0) as NSNumber)
+        currencyFormatter.currencyCode = "GBP"
+        valueGBP.text = currencyFormatter.string(from: (gbp ?? 0) as NSNumber)
+        currencyFormatter.currencyCode = "JPY"
+        valueJPY.text = currencyFormatter.string(from: (jpy ?? 0) as NSNumber)
     }
     
     @IBAction func returnPressed(_ sender: UIButton) {

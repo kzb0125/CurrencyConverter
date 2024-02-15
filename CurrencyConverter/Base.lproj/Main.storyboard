@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,39 +14,38 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CurrencyConverter" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="F8p-3q-7EO">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zpC-Ks-66i" userLabel="Main View">
-                                <rect key="frame" x="50" y="89" width="293" height="714"/>
+                                <rect key="frame" x="50" y="89" width="330" height="794"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4we-Ef-vpt" userLabel="labelTitle">
-                                        <rect key="frame" x="4" y="0.0" width="285.33333333333331" height="26.666666666666668"/>
+                                        <rect key="frame" x="22.333333333333343" y="0.0" width="285.33333333333326" height="26.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="26"/>
                                         <color key="textColor" red="0.96470588450000005" green="0.78039217000000005" blue="0.67058825489999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wx1-6V-Zkj" userLabel="Switch View">
-                                        <rect key="frame" x="6.6666666666666572" y="484" width="280" height="230"/>
+                                        <rect key="frame" x="25" y="564" width="280" height="230"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qWu-5I-93W" userLabel="USD View">
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qWu-5I-93W" userLabel="USD View">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter USD:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyV-FC-vO7" userLabel="labelUSD">
-                                                        <rect key="frame" x="0.0" y="0.0" width="180" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="30"/>
                                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                                         <color key="textColor" red="0.93460434675216675" green="0.98029345273971558" blue="0.97890502214431763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gX-R7-mZG">
-                                                        <rect key="frame" x="180" y="0.0" width="100" height="30"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="9" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="7gX-R7-mZG">
+                                                        <rect key="frame" x="138" y="0.0" width="142" height="30"/>
                                                         <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="FIN-rW-WQ8"/>
-                                                            <constraint firstAttribute="width" constant="100" id="ycn-5e-cWe"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.061180256307125092" green="0.20165601372718811" blue="0.20149832963943481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
@@ -196,7 +195,9 @@
                             <constraint firstItem="zpC-Ks-66i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dnj-TA-fIq"/>
                             <constraint firstItem="zpC-Ks-66i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="T6q-uF-CvA"/>
                             <constraint firstItem="F8p-3q-7EO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ya5-mc-F2i"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zpC-Ks-66i" secondAttribute="bottom" constant="15" id="h4f-0F-rfo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zpC-Ks-66i" secondAttribute="bottom" constant="15" id="h4f-0F-rfo">
+                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                            </constraint>
                             <constraint firstItem="zpC-Ks-66i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="hii-O2-Dbq"/>
                             <constraint firstAttribute="bottom" secondItem="F8p-3q-7EO" secondAttribute="bottom" id="v1T-GE-D9L"/>
                             <constraint firstItem="F8p-3q-7EO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vtt-fw-sZM"/>
@@ -220,23 +221,23 @@
             <objects>
                 <viewController id="rxX-gJ-zFy" customClass="ConversionViewController" customModule="CurrencyConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GN6-7f-Lsa">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="nzy-k9-VEl">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4S1-lP-qbu" userLabel="Conversion View">
-                                <rect key="frame" x="50" y="75" width="293" height="722"/>
+                                <rect key="frame" x="50" y="75" width="330" height="802"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ob-jf-tZl" userLabel="labelTitle">
-                                        <rect key="frame" x="4" y="0.0" width="285.33333333333331" height="26.666666666666668"/>
+                                        <rect key="frame" x="22.333333333333343" y="0.0" width="285.33333333333326" height="26.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="26"/>
                                         <color key="textColor" red="0.96470588450000005" green="0.78039217000000005" blue="0.67058825489999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gcJ-Te-8rt" userLabel="Xrate View">
-                                        <rect key="frame" x="6.6666666666666572" y="491" width="280" height="231"/>
+                                        <rect key="frame" x="25" y="571" width="280" height="231"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sTH-YI-wcH" userLabel="USD View">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="30"/>
@@ -250,7 +251,7 @@
                                                         <color key="textColor" red="0.93460434680000004" green="0.98029345270000001" blue="0.97890502209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="$ USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ls9-pV-Fdg" userLabel="valueUSD">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="$ USD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ls9-pV-Fdg" userLabel="valueUSD">
                                                         <rect key="frame" x="58" y="0.0" width="222" height="30"/>
                                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                                         <color key="textColor" red="0.94117647410000005" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -274,7 +275,7 @@
                                                         <color key="textColor" red="0.93460434680000004" green="0.98029345270000001" blue="0.97890502209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="€ EUR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIB-7E-jdl" userLabel="valueEUR">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="€ EUR" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oIB-7E-jdl" userLabel="valueEUR">
                                                         <rect key="frame" x="58" y="0.0" width="222" height="30"/>
                                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                                         <color key="textColor" red="0.94117647410000005" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -295,7 +296,7 @@
                                                         <color key="textColor" red="0.93460434680000004" green="0.98029345270000001" blue="0.97890502209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="₩ KRW" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOY-ZQ-Lkq" userLabel="valueKRW">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="₩ KRW" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TOY-ZQ-Lkq" userLabel="valueKRW">
                                                         <rect key="frame" x="58" y="0.0" width="222" height="30"/>
                                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                                         <color key="textColor" red="0.94117647410000005" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -316,7 +317,7 @@
                                                         <color key="textColor" red="0.93460434680000004" green="0.98029345270000001" blue="0.97890502209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="£ BGP" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hy-5p-m8P" userLabel="valueCNY">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="£ BGP" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3hy-5p-m8P" userLabel="valueCNY">
                                                         <rect key="frame" x="58" y="0.0" width="222" height="30"/>
                                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                                         <color key="textColor" red="0.94117647410000005" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -337,7 +338,7 @@
                                                         <color key="textColor" red="0.93460434680000004" green="0.98029345270000001" blue="0.97890502209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="¥ JPY" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25O-7w-sD0" userLabel="valueJPY">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" text="¥ JPY" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="25O-7w-sD0" userLabel="valueJPY">
                                                         <rect key="frame" x="58" y="0.0" width="222" height="30"/>
                                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                                         <color key="textColor" red="0.94117647410000005" green="0.98039215800000001" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
