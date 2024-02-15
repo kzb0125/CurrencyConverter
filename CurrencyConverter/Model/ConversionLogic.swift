@@ -32,17 +32,45 @@ struct ConversionLogic {
     mutating func calculateConversion(_ usdValue: String) -> [Int] {
         
         usd = Int(usdValue)!
-        eur = Int(Double(usd) * CurrencyConstants.USD_TO_EUR)
-        krw = Int(Double(usd) * CurrencyConstants.USD_TO_KRW)
-        gbp = Int(Double(usd) * CurrencyConstants.USD_TO_GBP)
-        jpy = Int(Double(usd) * CurrencyConstants.USD_TO_JPY)
-        
+        do {
+            eur = try valueCheck(Double(usd) * CurrencyConstants.USD_TO_EUR)
+            krw = try valueCheck(Double(usd) * CurrencyConstants.USD_TO_KRW)
+            gbp = try valueCheck(Double(usd) * CurrencyConstants.USD_TO_GBP)
+            jpy = try valueCheck(Double(usd) * CurrencyConstants.USD_TO_JPY)
+        } catch InputError.MaxValue(let reason) {
+            print(reason)
+        } catch {
+            print("Unknown Error")
+        }
         return [usd, eur, krw, gbp, jpy]
     }
     
-    func valueCheck() throws {
-        
+    func valueCheck(_ value: Double) throws -> Int {
+        var returnValue: Int?
+        // check that value is less than maximum integer value
+        guard value.toInt() != nil else {
+            returnValue = -1
+            throw InputError.MaxValue(reason: "Max Int Value Exceeded")
+        }
+        returnValue = (returnValue != -1) ? value.toInt() : -1
+        return returnValue!
     }
     
+    enum InputError: Error {
+        case MaxValue(reason: String)
+    }
     
+}
+
+extension Double {
+    func toInt() -> Int? {
+        let minInt = Double(Int.min)
+        let maxInt = Double(Int.max)
+
+        guard case minInt ... maxInt = self else {
+            return nil
+        }
+
+        return Int(self)
+    }
 }

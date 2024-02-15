@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var switchKRW: UISwitch!
     @IBOutlet weak var switchGBP: UISwitch!
     @IBOutlet weak var switchJPY: UISwitch!
-    
-    //
+   
     var conversionLogic = ConversionLogic()
     var valueUSD: Int = 0
     var conversionArr: [Int]?
@@ -27,7 +26,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func switchCurrency(_ sender: UISwitch) {
-        conversionLogic.setSwitch(sender.layer.name ?? "", sender.isOn)
+        conversionLogic.setSwitch(sender.accessibilityIdentifier! ?? "", sender.isOn)
     }
     
     @IBAction func calculateConversion(_ sender: UIButton) {
@@ -61,7 +60,7 @@ class ViewController: UIViewController {
             navigation.krw = conversionArr?[2]
             navigation.gbp = conversionArr?[3]
             navigation.jpy = conversionArr?[4]
-            
+            navigation.switchStatus = conversionLogic.switchCurr
         }
     }
     
@@ -91,5 +90,8 @@ class ViewController: UIViewController {
         case MaxValue(reason: String)
         case NegativeValue(reason: String)
     }
+    
+    
+
 }
 
