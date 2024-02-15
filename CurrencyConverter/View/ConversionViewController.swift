@@ -16,25 +16,26 @@ class ConversionViewController: UIViewController {
     @IBOutlet weak var valueJPY: UILabel!
     
     
-    var usd: String = ""
-    var eur: String = ""
-    var krw: String = ""
-    var gbp: String = ""
-    var jpy: String = ""
+    var usd: Int?
+    var eur: Int?
+    var krw: Int?
+    var gbp: Int?
+    var jpy: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        valueUSD.text = "\(usd)"
-        valueEUR.text = "\(eur)"
-        valueKRW.text = "\(krw)"
-        valueGBP.text = "\(gbp)"
-        valueJPY.text = "\(jpy)"
+        valueUSD.text = String(usd ?? 0)
+        valueEUR.text = String(eur ?? 0)
+        valueKRW.text = String(krw ?? 0)
+        valueGBP.text = String(gbp ?? 0)
+        valueJPY.text = String(jpy ?? 0)
         
     }
     
-    
-    
+    @IBAction func returnPressed(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
     
     // Hide views that have been switched off .isHidden = true
     

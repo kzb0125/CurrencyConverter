@@ -53,7 +53,11 @@ class ViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "toConversionView" {
             let navigation = segue.destination as! ConversionViewController
-            
+            navigation.usd = conversionArr?[0]
+            navigation.eur = conversionArr?[1]
+            navigation.krw = conversionArr?[2]
+            navigation.gbp = conversionArr?[3]
+            navigation.jpy = conversionArr?[4]
             
         }
     }
