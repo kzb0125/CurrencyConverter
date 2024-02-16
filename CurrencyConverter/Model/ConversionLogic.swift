@@ -32,34 +32,12 @@ struct ConversionLogic {
     mutating func calculateConversion(_ usdValue: String) -> [Int] {
         
         usd = Int(usdValue)!
-        do {
-            eur = try valueCheck(Double(usd) * CurrencyConstants.USD_TO_EUR)
-            krw = try valueCheck(Double(usd) * CurrencyConstants.USD_TO_KRW)
-            gbp = try valueCheck(Double(usd) * CurrencyConstants.USD_TO_GBP)
-            jpy = try valueCheck(Double(usd) * CurrencyConstants.USD_TO_JPY)
-        } catch InputError.MaxValue(let reason) {
-            print(reason)
-        } catch {
-            print("Unknown Error")
-        }
+        gbp = (Double(usd) * CurrencyConstants.USD_TO_GBP).toInt()!
+        eur = (Double(usd) * CurrencyConstants.USD_TO_EUR).toInt()!
+        jpy = (Double(usd) * CurrencyConstants.USD_TO_JPY).toInt()!
+        krw = (Double(usd) * CurrencyConstants.USD_TO_KRW).toInt()!
         return [usd, eur, krw, gbp, jpy]
     }
-    
-    func valueCheck(_ value: Double) throws -> Int {
-        var returnValue: Int?
-        // check that value is less than maximum integer value
-        guard value.toInt() != nil else {
-            returnValue = -1
-            throw InputError.MaxValue(reason: "Max Int Value Exceeded")
-        }
-        returnValue = (returnValue != -1) ? value.toInt() : -1
-        return returnValue!
-    }
-    
-    enum InputError: Error {
-        case MaxValue(reason: String)
-    }
-    
 }
 
 extension Double {
@@ -68,9 +46,9 @@ extension Double {
         let maxInt = Double(Int.max)
 
         guard case minInt ... maxInt = self else {
-            return nil
+            return -1
         }
-
+        
         return Int(self)
     }
 }

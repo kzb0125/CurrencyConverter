@@ -38,21 +38,22 @@ class ConversionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(switchStatus)
+        print(usd,eur,krw,gbp,jpy)
         displayConversion()
     }
     
     func displayConversion() {
         toggleSwitchView()
         currencyFormat.currencyCode = "USD"
-        valueUSD.text = currencyFormat.string(from: (usd ?? 0) as NSNumber)
+        valueUSD.text = currencyFormat.string(from: (usd!) as NSNumber)
         currencyFormat.currencyCode = "EUR"
-        valueEUR.text = currencyFormat.string(from: (eur ?? 0) as NSNumber)
+        valueEUR.text = (eur != -1) ? currencyFormat.string(from: (eur!) as NSNumber) : "Max Value Exceeded"
         currencyFormat.currencyCode = "KRW"
-        valueKRW.text = currencyFormat.string(from: (krw ?? 0) as NSNumber)
+        valueKRW.text = (krw != -1) ? currencyFormat.string(from: (krw!) as NSNumber) : "Max Value Exceeded"
         currencyFormat.currencyCode = "GBP"
-        valueGBP.text = currencyFormat.string(from: (gbp ?? 0) as NSNumber)
+        valueGBP.text = (gbp != -1) ? currencyFormat.string(from: (gbp!) as NSNumber) : "Max Value Exceeded"
         currencyFormat.currencyCode = "JPY"
-        valueJPY.text = currencyFormat.string(from: (jpy ?? 0) as NSNumber)
+        valueJPY.text = (jpy != -1) ? currencyFormat.string(from: (jpy!) as NSNumber) : "Max Value Exceeded"
     }
     
     @IBAction func returnPressed(_ sender: UIButton) {

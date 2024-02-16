@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="F8p-3q-7EO">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg1" translatesAutoresizingMaskIntoConstraints="NO" id="F8p-3q-7EO">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zpC-Ks-66i" userLabel="Main View">
@@ -47,7 +47,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="FIN-rW-WQ8"/>
                                                         </constraints>
-                                                        <color key="textColor" red="0.061180256307125092" green="0.20165601372718811" blue="0.20149832963943481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" red="0.02352941222" green="0.054901964960000001" blue="0.086274504660000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -159,7 +159,7 @@
                                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="CONVERT">
-                                                    <color key="titleColor" red="0.28627452250000002" green="0.32549020649999999" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.02352941222" green="0.074509806930000005" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -171,7 +171,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.32156863810000003" green="0.37647059560000001" blue="0.41176474089999998" alpha="0.29972061258278143" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.02352941222" green="0.074509806930000005" blue="0.1215686351" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="MAL-tA-ChX" firstAttribute="height" secondItem="qWu-5I-93W" secondAttribute="height" id="27Z-hd-ngi"/>
                                             <constraint firstItem="qZA-ES-EFi" firstAttribute="leading" secondItem="wx1-6V-Zkj" secondAttribute="leading" id="7e8-MO-APv"/>
@@ -237,7 +237,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="nzy-k9-VEl">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="nzy-k9-VEl">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4S1-lP-qbu" userLabel="Conversion View">
@@ -369,7 +369,7 @@
                                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="RETURN">
-                                                    <color key="titleColor" red="0.28627452250000002" green="0.32549020649999999" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.02352941222" green="0.074509806930000005" blue="0.1215686351" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -382,7 +382,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.32156863810000003" green="0.37647059560000001" blue="0.41176474089999998" alpha="0.29972061259999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.02352941222" green="0.074509806930000005" blue="0.1215686351" alpha="0.79796150662251653" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Uf9-KJ-zRP" secondAttribute="trailing" id="0G4-do-2G4"/>
                                             <constraint firstItem="fPI-r2-ewF" firstAttribute="height" secondItem="sTH-YI-wcH" secondAttribute="height" id="6TU-ag-oyJ"/>
