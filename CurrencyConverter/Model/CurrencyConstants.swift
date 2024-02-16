@@ -9,10 +9,10 @@ import Foundation
 
 struct CurrencyConstants {
     
-    // As of 02/15/2024
-    static let USD_TO_EUR = 0.93328
-    static let USD_TO_KRW = 1334.79
-    static let USD_TO_GBP = 0.79567
-    static let USD_TO_JPY = 150.562
+    // Last update 2024-2-16 1:25 AM UTC (source: https://www.exchange-rates.org/)
+    static let USD_TO_EUR = 0.9290
+    static let USD_TO_KRW = 1332.85
+    static let USD_TO_GBP = 0.7948
+    static let USD_TO_JPY = 150.17
     
 }

@@ -37,8 +37,6 @@ class ConversionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(switchStatus)
-        print(usd,eur,krw,gbp,jpy)
         displayConversion()
     }
     
